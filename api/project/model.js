@@ -19,6 +19,11 @@ const getProjects = async () => {
 }
 
 const createProject = async (project) => {
+    // if(project["project_completed"] === true) {
+    //     project["project_completed"] = 1
+    // } else {
+    //     project["project_completed"] = 0
+    // }
     const [id] = await db('projects').insert(project)
     const [newProject] = await db('projects').where('project_id', id)
     if(newProject["project_completed"] === 1) {

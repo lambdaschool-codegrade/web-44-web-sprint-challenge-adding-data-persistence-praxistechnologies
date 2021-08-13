@@ -1,7 +1,7 @@
 const db = require('../../data/dbConfig')
 
 const getResources = async () => {
-    const resources = await db('resources')
+    const resources = await db('resources').select('*')
     return resources
 }
 
