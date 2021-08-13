@@ -5,6 +5,7 @@ const Resources = require('./model')
 router.get('/', async (req, res, next) => {
     try {
         const resources = await Resources.getResources()
+        console.log("resources", resources)
         res.status(200).json(resources)
     } catch(err) {
         next(err)
