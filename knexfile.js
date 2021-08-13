@@ -9,11 +9,11 @@ const sharedConfig = {
 module.exports = {
   development: {
     ...sharedConfig,
-    connection: { filename: './dev.sqlite3' },
+    connection: { filename: './data/lambda.db3' },
     seeds: { directory: './data/seeds' },
   },
   testing: {
     ...sharedConfig,
-    connection: { filename: './dev.sqlite3' },
+    connection: { filename: './data/lambda.db3' },
   },
 };
